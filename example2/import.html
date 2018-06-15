@@ -1,0 +1,11 @@
+<template id="t">
+    <div>Hello World!</div>
+</template>
+
+<script>
+    (function() {
+        const doc = document.currentScript.ownerDocument;
+        const node = document.importNode(doc.querySelector('#t').content, true);
+        document.body.appendChild(node);
+    })();
+</script>

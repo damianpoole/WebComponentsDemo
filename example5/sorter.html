@@ -1,0 +1,30 @@
+<script>
+    (function() {
+        NewElement('sort-stuff', {
+            createdCallback: function() {
+                this.addEventListener('click', this.onClick.bind(this));
+            },
+
+            onClick: function(e) {
+                const key = e.target.dataset.key;
+
+                if(!key) return;
+
+                const target = document.querySelector(this.dataset.target);
+                const children = Array.from(target.children);
+                const elements = children.map(item => {
+                    return {
+                        value: +item.dataset[key],
+                        node: item
+                    };
+                });
+
+                elements.sort((x, y) => (x.value == y.value) ? 0 : (x.value < y.value ? 1 : -1));
+
+                elements.forEach(item => {
+                    target.appendChild(item.node);
+                });
+            }
+        })
+    })();
+</script>

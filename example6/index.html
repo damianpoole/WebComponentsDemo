@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../util.js"></script>
+    <link rel="import" href="../example4/highlight.html">
+    <link rel="import" href="../example5/sorter.html"/>
+
+    <style>
+        td {
+            border: solid #282828 1px;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    <sort-stuff data-target="#sortable">
+        <highlight-next></highlight-next>
+        <div>
+            <p><input type="radio" name="sort" data-key="id"/>Sort on ID</p>
+            <p><input type="radio" name="sort" data-key="price"/>Sort on Price</p>
+            <p><input type="radio" name="sort" data-key="stock"/>Sort on Stock</p>
+        </div>
+    </sort-stuff>
+
+    <table>
+        <highlight-next></highlight-next>
+        <tbody id="sortable">
+            <tr data-id="1" data-price="10" data-stock="100"><td>Xbox</td></tr>
+            <tr data-id="2" data-price="250" data-stock="10"><td>Switch</td></tr>
+            <tr data-id="3" data-price="400" data-stock="1"><td>Playstation</td></tr>
+            <tr data-id="4" data-price="1000" data-stock="5"><td>PC</td></tr>
+            <tr data-id="5" data-price="1" data-stock="200"><td>Ball</td></tr>
+        </tbody>
+    </table>
+</body>
+</html>

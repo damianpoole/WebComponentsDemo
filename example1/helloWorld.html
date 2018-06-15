@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <template id="t">
+            <div>Hello World!</duv>
+        </template>
+
+        <button onclick="show()">Add Component</button>
+
+        <script>
+            const show = () => {
+                const node = document.importNode(document.querySelector('#t').content, true);
+
+                document.body.appendChild(node);
+            };
+        </script>
+    </body>
+</html>

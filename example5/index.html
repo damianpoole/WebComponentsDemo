@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../util.js"></script>
+    <link rel="import" href="sorter.html"/>
+</head>
+<body>
+    <sort-stuff data-target="#sortable">
+        <button data-key="id">Sort on ID</button>
+        <button data-key="price">Sort on Price</button>
+        <button data-key="stock">Sort on Stock</button>
+    </sort-stuff>
+
+    <ul id="sortable">
+        <li data-id="1" data-price="10" data-stock="100">Xbox</li>
+        <li data-id="2" data-price="250" data-stock="10">Switch</li>
+        <li data-id="3" data-price="400" data-stock="1">Playstation</li>
+        <li data-id="4" data-price="1000" data-stock="5">PC</li>
+        <li data-id="5" data-price="1" data-stock="200">Ball</li>
+    </ul>
+</body>
+</html>

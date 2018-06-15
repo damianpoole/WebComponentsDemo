@@ -1,0 +1,30 @@
+<template id="t">
+    <button>Add highlight</button>
+</template>
+
+<script>
+    (function() {
+        const ctx = new Context();
+
+        NewElement('highlight-next', {
+            createdCallback: function() {
+                this.appendChild(ctx.import('t'));
+                this.button = this.querySelector('button');
+                this.button.addEventListener('click', this.onClick.bind(this));
+            },
+
+            onClick: function() {
+                const sibling = this.nextElementSibling;
+                const current = sibling.style.backgroundColor;
+
+                if (current == '') {
+                    sibling.style.backgroundColor = 'hotpink';
+                    this.button.innerText = 'Remove highlight';
+                } else {
+                    sibling.style.backgroundColor = '';
+                    this.button.innerText = 'Add highlight';
+                }
+            }
+        });
+    })();
+</script>
