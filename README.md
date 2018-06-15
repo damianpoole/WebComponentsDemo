@@ -6,3 +6,4 @@
 - Example 4: Interacting with sibling elements
 - Example 5: More complex interactions
 - Example 6: Combining multiple components
+- Example 7: Third party components
